@@ -92,6 +92,7 @@ header{
     border-radius: 8px;
     background: #e0e6ec;
     box-shadow: 7px 7px 14px #bec4c9, -7px -7px 14px #fff;
+    transition: all 0.1s; 
 }
 .flex2{
     margin-top: 20px;
@@ -114,9 +115,16 @@ header{
     border-radius: 8px;
     background: #e0e6ec;
     box-shadow: 7px 7px 14px #bec4c9, -7px -7px 14px #fff;
+    transition: all 0.1s; 
 }
 #wa{
     height: 140px;
     line-height: 130px;
+}
+.flex2 li:active{
+    box-shadow: none;
+}
+.flex1 li:active{
+    box-shadow: none;
 }
 
