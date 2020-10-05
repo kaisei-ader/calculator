@@ -33,26 +33,26 @@ class calculator {
     selectMethod(value){
         this.method = value
         this.state = 1
-        $('.method').css('color','rgba(82,81,81)');
+        $('.method').css({'box-shadow':'7px 7px 14px #bec4c9, -7px -7px 14px #fff','transition':'all 0.1s'});
         switch(this.method){
             case 0:
-                $('#waru').css('color','red')
+                $('#waru').css('box-shadow',boxshadowPushed)
                 break
             case 1:
-                $('#kakeru').css('color','blue')
+                $('#kakeru').css('box-shadow',boxshadowPushed)
                 break
             case 2:
-                $('#hiku').css('color','green')
+                $('#hiku').css('box-shadow',boxshadowPushed)
                 break
             case 3:
-                $('#tasu').css('color','pink')
+                $('#tasu').css('box-shadow',boxshadowPushed)
                 break
             }
     }
 
     calc(){
         let calcValue = (value1,value2) =>{
-            $('.method').css('color','rgba(82,81,81)');
+            $('.method').css('box-shadow','7px 7px 14px #bec4c9, -7px -7px 14px #fff');
             switch(this.method){
                 case 0:
                     this.field = Number(value1) /  Number(value2)
@@ -71,5 +71,9 @@ class calculator {
         calcValue(this.value1,this.value2)
     }
 }
+
+let boxshadowPushed =`
+inset 7px 7px 14px #bec4c9,
+inset -7px -7px 14px #fff`
 
 const c = new calculator();
