@@ -30,7 +30,7 @@ header{
     color: rgba(82,81,81);
     font-family: "Noto Sans JP", sans-serif;
 }
-#stage{
+#stage {
     width: 500px;
     margin:50px auto;
     background: #e0e6ec;
@@ -38,6 +38,7 @@ header{
     border-radius: 10px;
     border: 1px solid #e0e6ec;
 }
+
 #stage #screen{
     width: 90%;
     margin: 0 auto;
@@ -48,20 +49,15 @@ header{
     border-radius: 10px;
     position: relative;
 }
-#stage #screen p {
+.text1 {
     width: 100%;
     text-align: right;
     position: absolute;
     right: 10px;
-  }
-#stage #screen p.text1 {
-    margin-bottom: 3px;
-    top: 10px;
-  }
-#stage #screen p.text2 {
     font-size: 24px;
+    color: rgba(82,81,81);
     font-weight: bold;
-    top: 35px;
+    top: 32px;
 }
 .flex-wrap{
     display: flex;
@@ -94,6 +90,9 @@ header{
     box-shadow: 7px 7px 14px #bec4c9, -7px -7px 14px #fff;
     transition: all 0.1s; 
 }
+#zero{
+    width: 57%;
+}
 .flex2{
     margin-top: 20px;
     width: 30%;
@@ -116,10 +115,6 @@ header{
     background: #e0e6ec;
     box-shadow: 7px 7px 14px #bec4c9, -7px -7px 14px #fff;
     transition: all 0.1s; 
-}
-#wa{
-    height: 140px;
-    line-height: 130px;
 }
 .flex2 li:active{
     box-shadow: none;
