@@ -24,15 +24,51 @@ class calculator {
                 break
             case 1:
                 console.log(value)
-                this.value2 = this.value + value
+                this.value2 = this.value2 + value
                 this.field = this.value2
                 break
         }
     }
 
     selectMethod(value){
-    this.method = value
-    this.state = 1
+        this.method = value
+        this.state = 1
+        $('.method').css('color','rgba(82,81,81)');
+        switch(this.method){
+            case 0:
+                $('#waru').css('color','red')
+                break
+            case 1:
+                $('#kakeru').css('color','blue')
+                break
+            case 2:
+                $('#hiku').css('color','green')
+                break
+            case 3:
+                $('#tasu').css('color','pink')
+                break
+            }
+    }
+
+    calc(){
+        let calcValue = (value1,value2) =>{
+            $('.method').css('color','rgba(82,81,81)');
+            switch(this.method){
+                case 0:
+                    this.field = Number(value1) /  Number(value2)
+                    break
+                case 1:
+                    this.field = Number(value1) *  Number(value2)
+                    break
+                case 2:
+                    this.field = Number(value1) -  Number(value2)
+                    break
+                case 3:
+                    this.field = Number(value1) +  Number(value2)
+                    break
+            }
+        }
+        calcValue(this.value1,this.value2)
     }
 }
 

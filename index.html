@@ -20,8 +20,8 @@
         <div class="flex-wrap">
             <ul class="flex1">
                 <li id="ac" class="colspan">AC</li>
-                <li id="pasent">+/-</li>
-                <li id="waru">%</li>
+                <li id="puramai">+/-</li>
+                <li id="persent">%</li>
                 <li class="num" onclick="c.setVal(7)">7</li>
                 <li class="num" onclick="c.setVal(8)">8</li>
                 <li class="num" onclick="c.setVal(9)">9</li>
@@ -35,11 +35,11 @@
                 <li id="ten">.</li>
             </ul>
             <ul class="flex2">
-                <li id="kake" onclick="c.selectMethod(0)">÷</li>
-                <li id="hiku" onclick="c.selectMethod(1)">×</li>
-                <li id="tasu" onclick="c.selectMethod(2)">－</li>
-                <li id="wa" class="colspan" onclick="c.selectMethod(3)">＋</li>
-                <li id="wa">=</li>
+                <li class="method" id="waru" onclick="c.selectMethod(0)">÷</li>
+                <li class="method" id="kakeru" onclick="c.selectMethod(1)">×</li>
+                <li class="method" id="hiku" onclick="c.selectMethod(2)">－</li>
+                <li class="method" id="tasu" class="colspan" onclick="c.selectMethod(3)">＋</li>
+                <li id="wa" onclick="c.calc()">=</li>
             </ul>
         </div>
     </div>
