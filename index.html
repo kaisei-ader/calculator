@@ -21,8 +21,8 @@
             <ul class="flex1">
                 <li id="c" class="colspan" onclick="c.clear()" style="display: none;">C</li>
                 <li id="ac" class="colspan" onclick="c.init()">AC</li>
-                <li id="puramai">+/-</li>
-                <li id="persent">%</li>
+                <li id="puramai" onclick="c.changeVal(-c.field)">+/-</li>
+                <li id="persent" onclick="c.changeVal(c.field / 100)">%</li>
                 <li class="num" onclick="c.setVal(7)">7</li>
                 <li class="num" onclick="c.setVal(8)">8</li>
                 <li class="num" onclick="c.setVal(9)">9</li>
@@ -33,7 +33,7 @@
                 <li class="num" onclick="c.setVal(2)">2</li>
                 <li class="num" onclick="c.setVal(3)">3</li>
                 <li id=zero class="colspan num" onclick="c.setVal(0)">0</li>
-                <li id="ten">.</li>
+                <li id="ten" onclick="c.adDot()">.</li>
             </ul>
             <ul class="flex2">
                 <li class="method" id="waru" onclick="c.selectMethod(0)">÷</li>
