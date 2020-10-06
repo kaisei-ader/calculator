@@ -25,6 +25,26 @@ class calculator {
         $('#' + (!value ? 'c' : 'ac')).css('display', 'inline')
     }
 
+    adDot(){
+        switch(this.state){
+            case 0:
+                let search1 = this.value1.includes('.');
+                if(!search1){
+                    this.value1 = this.field + '.'
+                    this.field = this.value1
+                }
+                break
+            case 1:
+            case 2:
+                let search2 = this.value2.includes('.');
+                if(!search2){
+                    this.value2 = this.field + '.'
+                    this.field = this.value2
+                }
+                break
+        }
+    }
+
     clear(){
         switch(this.state){
             case 0:
@@ -33,14 +53,39 @@ class calculator {
                 this.field = "0"
                 this.value1 =""
                 this.changeClear = true
-                } else{
+                } else {
                 this.value1 = result.toString()
                 this.field = this.value1
                 }
+                break
             case 1:
             case 2:
-
+                let result2 = this.value2.slice(0, -1);
+                if(result2 === ''){
+                    this.field = "0"
+                    this.value2 =""
+                    this.changeClear = true
+                } else {
+                    this.value2 = result2.toString()
+                    this.field = this.value2
+                }
+                break
         }
+    }
+
+    changeVal(value){
+        switch(this.state){
+            case 0:
+                this.value1 = value
+                this.field = this.value1
+                break
+            case 1:
+            case 2:
+                this.value2 = value
+                this.field = this.value2
+                break
+        }
+        this.changeClear = true
     }
 
     setVal(value){
