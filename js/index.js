@@ -1,5 +1,5 @@
 class calculator {
-        constructor(){
+    constructor(){
         this.init()
     }
     
@@ -45,17 +45,22 @@ class calculator {
         }
     }
 
+    allClear(){
+        this.init()
+        $('.method').css({'box-shadow':'7px 7px 14px #bec4c9, -7px -7px 14px #fff','transition':'all 0.1s'});
+    }
+
     clear(){
         switch(this.state){
             case 0:
                 let result = this.value1.slice(0, -1);
                 if(result === ''){
-                this.field = "0"
-                this.value1 =""
-                this.changeClear = true
+                    this.field = "0"
+                    this.value1 =""
+                    this.changeClear = true
                 } else {
-                this.value1 = result.toString()
-                this.field = this.value1
+                    this.value1 = result.toString()
+                    this.field = this.value1
                 }
                 break
             case 1:
@@ -84,6 +89,8 @@ class calculator {
                 this.value2 = value
                 this.field = this.value2
                 break
+            case 3:
+                this.field = value
         }
         this.changeClear = true
     }
